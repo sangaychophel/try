@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 {% load static %}
+	<meta charset="UTF-8">
+	<title>Event Details</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="{% static 'css/events.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+	<link rel="stylesheet" href="{% static 'js/main.js' %}">
+
+	<link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}" media="screen">
+	<script src="{% static 'https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js' %}"></script>
+      <script src="{% static 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'fontawesome-5/fontawesome-css/all.css'%}">
+	
+
+</head>
+<header>
+    <div class="page-wrapper">
+        <div class="nav-wrapper">
+            <div class="grad-bar"></div>
+            <nav class="navbar">
+                <a href="/"><p><strong>event management</strong></p> </a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav no-search">
+                    <li class="nav-item"><a href="{%url 'index'%}">Home</a></li>
+                    <li class="nav-item"><a href="{%url 'aboutus'%}">About</a></li>
+                    <li class="nav-item"><a href="{%url 'login'%}">Regieter</a></li>
+					<li class="nav-item"><a href="{%url 'eventdetail'%}">Event</a></li>
+                    <li class="nav-item"><a href="{%url 'contact'%}">Contact Us</a></li>
+                </ul>
+
+			</ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<header>
+
+			<ul class="indicator">
+				<li data-filter="all" class="active"><a href="#">All</a></li>
+				<li data-filter="maga night"><a href="#">Maga Night</a></li>
+				<li data-filter="wedding"><a href="#">Wedding</a></li>
+				<li data-filter="film festival"><a href="#">Film Festival</a></li>
+
+			</ul>
+
+			<div class="filter-condition">
+				<span>View As a</span>
+				<select name="" id="select">
+					<option value="Default">Default</option>
+					<option value="LowToHigh">Low to high</option>
+					<option value="HighToLow">High to low</option>
+				</select>
+			</div>
+		</header>
+<body>
+		<div class="product-field">
+			<ul class="items">
+				<li data-category="" date="">
+					<picture>
+						<img src="static/images/film.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>maga night</strong>
+						<span><strong>Changlinmethang</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2023-02-01</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="static/images/summer.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>wedding</strong>
+						<span><strong>Hotel Ugyen</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2023-05-10</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="static/images/light.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>film festival</strong>
+						<span><strong>Clock Tower</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2020-09-22</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="image/bz2.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>2023 night</strong>
+						<span><strong>Changlinmethang</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2023-04-11</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="image/wa3.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>wedding</strong>
+						<span><strong>Le maradon</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2019-05-22</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="image/bz4.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>film festival</strong>
+						<span><strong>Changlinmethang</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2023-10-23</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="image/so.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>wedding</strong>
+						<span><strong>Yarkey</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2020-12-24</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="image/samsung.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>winter festival </strong>
+						<span><strong>Changlinmethang</strong> </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2022-12-23</h4>
+				</li>
+				<li data-category="" date="">
+					<picture>
+						<img src="image/so1.png" alt="">
+					</picture>
+					<div class="detail">
+						<p class="icon">
+						   <span><i class="far fa-heart"></i></span>
+						   <span><i class="far fa-share-square"></i></span>
+						   <span><i class="fas fa-shopping-basket"></i></span>
+						</p>
+						<strong>film festival</strong>
+						<span>YDF Hall </span>
+						<span>Lorem, ipsum dolor sit amet consectetur.</span>
+						<small><a href="{%url 'login'%}">register</a></small>
+					</div>
+					<h4>2021-01-12</h4>
+				</li>
+
+
+			</ul>
+		</div>
+	</main>
+
+</body>
+</html>
+<script type="text/javascript" src="{%static 'js/main.js'%}"></script>

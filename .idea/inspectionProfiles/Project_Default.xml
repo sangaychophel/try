@@ -1,0 +1,51 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="student_management_system.student_management_system.urls.views" />
+          <option value="student_management_system.student_management_system.urls.student_mamagement_app" />
+          <option value="student_management_system.student_management_system.urls.include" />
+          <option value="student_management_system.student_mamagement_app.admin.CustomUser" />
+          <option value="web.web.urls.view" />
+          <option value="web.web.views" />
+          <option value="web.web.urls.*" />
+          <option value="web.demo.emailBackend.user" />
+          <option value="web.demo.emailBackend.UserModel" />
+          <option value="web.demo.admin.CustomUser" />
+          <option value="web.web.views.EmailBackend" />
+          <option value="web.web.views.demoProject" />
+          <option value="django.contrib.auth.backends.ModelBackend" />
+          <option value="schoolweb.schoolweb.views" />
+          <option value="web.web.views.httpResponse" />
+          <option value="web.demoProject.views.EmailBackEnd" />
+          <option value="crude.crude.views" />
+          <option value="crude.crude.urls.crudOperation" />
+          <option value="crude.crudOperation.views.Emplpoyee" />
+          <option value="crude.crudOperation.views.crudOperation" />
+          <option value="schoolManagment.schoolManagment.urls.views" />
+          <option value="schoolManagment.schoolManagment.views.studentManagementSystem" />
+          <option value="schoolManagment.views" />
+          <option value="schoolManagment.EmailBackend" />
+          <option value="schoolManagment.schoolManagment.urls.hod_Views" />
+          <option value="schoolManagment.schoolManagment.hod_Views.request" />
+          <option value="schoolManagment.schoolManagment.views.CustomUser" />
+          <option value="crude.crudOperation.views.message" />
+          <option value="schoolManagment.schoolManagment.hod_Views.subject_count" />
+          <option value="schoolManagment.schoolManagment.urls.staff_Views" />
+          <option value="flightServices.flightServices.urls.fightApp" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

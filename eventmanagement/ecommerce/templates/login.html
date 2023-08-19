@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Event Management System</title>
+</head>
+
+<body style="background-color:rgb(176, 196, 230);">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-md">
+        <a class="navbar-brand" href="/">Event Management</a>
+    </div>
+
+</nav>
+
+<div class="container mt-1">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="text-white bg-dark text-center p-1">Event Registration Form</h2>
+           {%for message in messages%}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>
+           {%endfor%}
+            <br>
+            <form action="/insert" method="post"> {%csrf_token%}
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control mt-2" placeholder="Enter Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control mt-2" placeholder="Enter phone number" name="phone" pattern="[0-9]{9}" / required>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" class="form-control mt-2" placeholder="Enter date" name="date" required>
+
+
+                    <div class="form-group">
+                        <select class="form-control mt-2" id="gender" name="gender" required>
+                            <option selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control mt-2" id="event" name="event" required>
+                            <option selected>Event List </option>
+                            <option value="mega night">Maga Night </option>
+                            <option value="sonam wedding">Sonam Wedding</option>
+                            <option value="film festival">film festival</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control mt-2" id="location" name="location" required>
+                            <option selected>Location </option>
+                            <option value="thimphu">Thimphu </option>
+                            <option value="paro">Paro</option>
+                            <option value="wangdue">Wangdue</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 p-1">
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </div>
+
+        </form>
+
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
